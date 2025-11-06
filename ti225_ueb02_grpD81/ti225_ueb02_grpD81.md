@@ -37,6 +37,7 @@ Um zu wissen, welche Prozesse im Vordergrund ausgeführt werden und welche im Hi
 
 ## Literaturverzeichnis
 1) OpenAI ChatGPT Chatverlauf (s. Anhang) (04.11.2025)
+2) Woyciechowski, Marcus (2020), Linux Cheat Sheet / Spickzettel: Übersicht der wichtigsten Terminal Befehle, in: woytec.de, 13.06.2020, https://woytec.de/linux/linux-cheat-sheet-spickzettel-uebersicht-der-wichtigsten-terminal-befehle/
 
 /
 
