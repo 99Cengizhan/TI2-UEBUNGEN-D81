@@ -1,13 +1,3 @@
----
-title: Abgabe Übungsblatt 01
-subtitle: Technische Informatik 2 Wintersemester 2025/26
-author: Baris Basar, Cengizhan Evcil, Nicolai Held
-group: D81
-ctfteam: 403 FORBIDDEN
-tutor: Tjark Moritz
-bibliography: bibueb01.yaml
----
-
 # Signalserver für SIGCONT
 
 ## Beschreibung
