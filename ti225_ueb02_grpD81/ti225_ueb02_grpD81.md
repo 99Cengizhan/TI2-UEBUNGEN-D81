@@ -35,11 +35,53 @@ Um zu wissen, welche Prozesse im Vordergrund ausgeführt werden und welche im Hi
 
 # Aufgabe 3
 
+# Signalserver für SIGCONT
+
+## Beschreibung
+Dieses Programm wartet auf Signale des Typs `SIGCONT` und gibt Informationen über den Sender aus.  
+Es verwendet `sigaction` mit `SA_SIGINFO`, um die PID und UID des sendenden Prozesses zu ermitteln.
+
+## Aufbau
+- signalHandler(int signum, siginfo_t* info, void* ctx):
+  - Gibt die Signalnummer aus.
+  - Gibt PID und UID des Senders aus (wenn verfügbar).
+  - Meldet, dass das Programm weiterläuft.
+
+- main():
+  - Initialisiert `sigaction`.
+  - Setzt Handler für `SIGCONT`.
+  - Wartet in einer Endlosschleife auf Signale (`pause()`).
+
+## Nutzung
+1. Kompilieren:
+   ```bash
+   g++ -o sigserver sigserver.cpp
+   ```
+
+2. Starten:
+  ```bash
+  ./sigserver
+  ```
+
+3. Signal senden (von anderem Terminal):
+  ```bash
+  kill -SIGCONT <PID_des_Programms>
+  ```
+
+Beispielausgabe:
+  sigserver gestartet. PID = 12345
+  Warten auf SIGCONT...
+  Signal erhalten: 18
+  Sender-PID: 67890
+  Sender-UID: 1000
+  Programm läuft weiter...
+  
 ## Literaturverzeichnis
+
 1) OpenAI ChatGPT Chatverlauf (s. Anhang) (04.11.2025)
 2) Woyciechowski, Marcus (2020), Linux Cheat Sheet / Spickzettel: Übersicht der wichtigsten Terminal Befehle, in: woytec.de, 13.06.2020, https://woytec.de/linux/linux-cheat-sheet-spickzettel-uebersicht-der-wichtigsten-terminal-befehle/
+3) Kerrisk, Michael (2025), sigaction(2) — Linux manual page, in: man7.org, 17.05.2025, https://man7.org/linux/man-pages/man2/sigaction.2.html
 
-/
 
 # Anhang
 
