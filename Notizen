@@ -1,9 +1,40 @@
----
-title: Abgabe Übungsblatt 01
-subtitle: Technische Informatik 2 Wintersemester 2025/26
-author: Baris Basar, Cengizhan Evcil, Nicolai Held
-group: D81
-ctfteam: 403 FORBIDDEN
-tutor: Tjark Moritz
-bibliography: bibueb01.yaml
----
+# Signalserver für SIGCONT
+
+## Beschreibung
+Dieses Programm wartet auf Signale des Typs `SIGCONT` und gibt Informationen über den Sender aus.  
+Es verwendet `sigaction` mit `SA_SIGINFO`, um die PID und UID des sendenden Prozesses zu ermitteln.
+
+## Aufbau
+- signalHandler(int signum, siginfo_t* info, void* ctx):
+  - Gibt die Signalnummer aus.
+  - Gibt PID und UID des Senders aus (wenn verfügbar).
+  - Meldet, dass das Programm weiterläuft.
+
+- main():
+  - Initialisiert `sigaction`.
+  - Setzt Handler für `SIGCONT`.
+  - Wartet in einer Endlosschleife auf Signale (`pause()`).
+
+## Nutzung
+1. Kompilieren:
+   ```bash
+   g++ -o sigserver sigserver.cpp
+   ```
+
+2. Starten:
+  ```bash
+  ./sigserver
+  ```
+
+3. Signal senden (von anderem Terminal):
+  ```bash
+  kill -SIGCONT <PID_des_Programms>
+  ```
+
+Beispielausgabe:
+  sigserver gestartet. PID = 12345
+  Warten auf SIGCONT...
+  Signal erhalten: 18
+  Sender-PID: 67890
+  Sender-UID: 1000
+  Programm läuft weiter...
