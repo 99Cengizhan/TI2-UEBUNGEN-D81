@@ -88,10 +88,52 @@ $$\text{flag{21290e22-9689-45e1-bf20-421230aaada5}}$$
 
 # Aufgabe 2
 
+
+a)
+
+
+![Flagge](flag.png){width=100%}.
+
+
+
+![Loesung](list1.png){width=100%}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Wie in der Aufgabenstellung¹ erwähnt, sind Prozesse "zustandsorientiert" und gleiche Interrupts können zu einem Zeitpunkt nur einmal vorliegen. Daher wird der *zweite Interrupt mit der Priorität 5* vernachlässigt und geht *verloren*, denn zu jenem Zeitpunkt wird bereits ein Interrupt mit Priorität 5 bearbeitet. 
+Einige Interrupts werden eingereiht, da höherwertig priorisierte Interrupts anstehen¹(*Priority Scheduling*) (je größer die Priorität desto dringlicher), dies wird hoffentlich in der folgenden Auflistung leicht ersichtlich:
+(Die Bearbeitungsdauer wird in den Klammern angegegeben)
+
+
+
+![Auflistung](Auflistung.png){width=100%}
+
+
+
+Kein *eingereihter* Interrupt meldet sich nochmal(bevor er fertig bearbeitet wird), daher geht auch kein *eingreihter* Interrupt verloren. 
+Zum *Zeitpunkt 7* wird ein *Interrupt mit Priorität 2* eingereiht und dieser kann erst zum *Zeitpunkt 16* beabreitet werden, da bis dahin erst höherwertig priorisierte Interrupts bearbeitet werden. Zu *Zeitpunkt 13* meldet sich bereits der *Interrupt mit Priorität 1*, dieser muss sich aber aufgrund des *Interrupts mit Priorität 2* hinter diesem einreihen und bis *Zeitpunkt 17* gedulden.
+
+b)
+
+Der resultierende Ablauf ist zufriedenstellend, falls der verlorene Interrupt mit der Priorität 5 keine kritischen Informationen (auch ein Zeitstempel kann je nach Umstand kritisch sein) bearbeiten wollte. Da die Interrupts aber zustandsorientiert sind, also eine mehrfache gleichzeitige Einreihung nicht erlaubt ist, und diese Entscheidung wohl bewusst bei dem System getroffen wurde, lässt sich davon ausgehen, dass dieser verlorene Interrupt nicht kritisch war und so sogar Effizienz gewonnen wurde, sodass sich die Bearbeitung anderer Interrupts nicht noch weiter aufschieben konnte.  
+
 ## Literaturverzeichnis
 
-1)
-2)
-3)
+-¹ Aufgabenstellung der Challenge "Unterbrechungen" auf der CTF-Plattform der Uni-Bremen des Moduls TI2 WS25/26 10.11.25 (Screenshot siehe Anhang)
+
+
 
 # Anhang
+
+-¹ ![Aufgabenstellung CTF-Plattform Uni-Bremen TI2 WS25/26 -Unterbrechungen](Aufgabenstellung.png){width=100%}
+
