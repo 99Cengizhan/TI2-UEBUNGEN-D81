@@ -111,9 +111,6 @@ Der resultierende Ablauf ist zufriedenstellend, falls der verlorene Interrupt mi
 
 -¹ Aufgabenstellung der Challenge "Unterbrechungen" auf der CTF-Plattform der Uni-Bremen des Moduls TI2 WS25/26 10.11.25 (Screenshot siehe Anhang)
 
-
-
 # Anhang
-
--¹ ![Aufgabenstellung CTF-Plattform Uni-Bremen TI2 WS25/26 -Unterbrechungen](Aufgabenstellung.png){width=100%}
+-¹ ![Aufgabenstellung CTF-Plattform Uni-Bremen TI2 WS25/26 -Unterbrechungen](Aufgabenstellung.png)
 
