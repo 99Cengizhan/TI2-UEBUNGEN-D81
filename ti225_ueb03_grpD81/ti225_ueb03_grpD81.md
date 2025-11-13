@@ -133,5 +133,9 @@ nm liest Objektdateien (.o), Bibliotheken (.a, .so) oder ausführbare Dateien un
 
 
 
-2) ![Aufgabenstellung CTF-Plattform Uni-Bremen TI2 WS25/26 -Unterbrechungen](Aufgabenstellung.png)
+
+
+2)  
+
+![Aufgabenstellung CTF-Plattform Uni-Bremen TI2 WS25/26 -Unterbrechungen](Aufgabenstellung.png)
 
