@@ -114,7 +114,7 @@ Der resultierende Ablauf ist zufriedenstellend, falls der verlorene Interrupt mi
 
 # Anhang
 
-Chatverlauf mit [ChatGPT] (https://chat.openai.com/chat) am 04.11.2025:
+1) Chatverlauf mit [ChatGPT] (https://chat.openai.com/chat) am 04.11.2025:
 Frage: Was macht nm Kommando in Unix
 Weitere Frage: Kompilieren, Linken und Ausführen Kommandos
 
@@ -133,5 +133,5 @@ nm liest Objektdateien (.o), Bibliotheken (.a, .so) oder ausführbare Dateien un
 
 
 
--¹ ![Aufgabenstellung CTF-Plattform Uni-Bremen TI2 WS25/26 -Unterbrechungen](Aufgabenstellung.png)
+2) ![Aufgabenstellung CTF-Plattform Uni-Bremen TI2 WS25/26 -Unterbrechungen](Aufgabenstellung.png)
 
