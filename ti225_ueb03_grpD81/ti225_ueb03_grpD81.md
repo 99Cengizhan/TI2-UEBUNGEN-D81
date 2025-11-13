@@ -92,6 +92,8 @@ $$\text{flag{21290e22-9689-45e1-bf20-421230aaada5}}$$
 ## a. Die Flagge & die Lösung
 
 ![Flagge](flag.png)
+
+
 ![Loesung](list1.png)
 
 Wie in der Aufgabenstellung¹ erwähnt, sind Prozesse "zustandsorientiert" und gleiche Interrupts können zu einem Zeitpunkt nur einmal vorliegen. Daher wird der *zweite Interrupt mit der Priorität 5* vernachlässigt und geht *verloren*, denn zu jenem Zeitpunkt wird bereits ein Interrupt mit Priorität 5 bearbeitet. 
