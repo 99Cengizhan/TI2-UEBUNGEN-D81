@@ -109,8 +109,29 @@ Der resultierende Ablauf ist zufriedenstellend, falls der verlorene Interrupt mi
 
 ## Literaturverzeichnis
 
--¹ Aufgabenstellung der Challenge "Unterbrechungen" auf der CTF-Plattform der Uni-Bremen des Moduls TI2 WS25/26 10.11.25 (Screenshot siehe Anhang)
+1) OpenAI ChatGPT Chatverlauf (s. Anhang) (11.11.2025)
+2) Aufgabenstellung der Challenge "Unterbrechungen" auf der CTF-Plattform der Uni-Bremen des Moduls TI2 WS25/26 10.11.25 (Screenshot siehe Anhang)
 
 # Anhang
+
+Chatverlauf mit [ChatGPT] (https://chat.openai.com/chat) am 04.11.2025:
+Frage: Was macht nm Kommando in Unix
+Weitere Frage: Kompilieren, Linken und Ausführen Kommandos
+
+nm liest Objektdateien (.o), Bibliotheken (.a, .so) oder ausführbare Dateien und zeigt die Symboltabelle an — also alle Funktionen, Variablen, und deren Speicheradressen.
+
+
+
+| Schritt                       | Befehl                    | Beschreibung                          |
+| :---------------------------- | :------------------------ | :------------------------------------ |
+| 1️⃣ Kompilieren               | `gcc -c file.c -o file.o` | Übersetzt in Objektdatei              |
+| 2️⃣ Symbolanalyse             | `nm file.o`               | Zeigt Symbole (Funktionen, Variablen) |
+| 3️⃣ Linken                    | `gcc file.o -o program`   | Erstellt ausführbare Datei            |
+| 4️⃣ Prüfen der Abhängigkeiten | `ldd ./program`           | Zeigt benötigte Bibliotheken          |
+| 5️⃣ Ausführen                 | `./program`               | Startet das Programm                  |
+| 6️⃣ Debugging                 | `gdb ./program`           | Startet Debugger                      |
+
+
+
 -¹ ![Aufgabenstellung CTF-Plattform Uni-Bremen TI2 WS25/26 -Unterbrechungen](Aufgabenstellung.png)
 
