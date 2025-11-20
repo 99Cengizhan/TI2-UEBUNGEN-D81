@@ -1,20 +1,43 @@
-#include <cstddef>
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
-#include <string>
+/**
+ * @file ti2sh.cc
+ * @brief Hauptprogramm für eine einfache Unix-Shell (TI2-Shell)
+ * 
+ * Diese Datei implementiert eine minimalistische Unix-Shell, die Befehle
+ * vom Benutzer entgegennimmt, diese in eigenen Prozessen ausführt und
+ * sowohl Vordergrund- als auch Hintergrundprozesse unterstützt.
+ * 
+ * Kernfunktionalität:
+ * - Lesen und Parsen von Benutzereingaben
+ * - Prozesserzeugung mittels fork()
+ * - Programmausführung mittels execv()
+ * - Verwaltung von Vordergrund- und Hintergrundprozessen
+ * - Signalbehandlung für beendete Kindprozesse
+ * 
+ * @author TI2-Gruppe D81
+ * @date November 2025
+ */
 
-#include <iostream>
-#include <memory>
-#include <vector>  // Für die Konvertierung von argv
+/* Standard-C-Bibliotheken */
+#include <cstddef>     // Für size_t
+#include <cstdio>      // Für perror()
+#include <cstdlib>     // Für exit(), EXIT_FAILURE
+#include <cstring>     // Für Stringoperationen
+#include <string>      // Für std::string
 
-#include "shell.hh"
-#include "sighnd.hh"
+/* C++-Bibliotheken */
+#include <iostream>    // Für Ein-/Ausgabe
+#include <memory>      // Für std::unique_ptr
+#include <vector>      // Für std::vector, Konvertierung von argv
 
-#include <unistd.h>  // Für fork(), execv()
-#include <sys/types.h>  // Für pid_t
-#include <sys/wait.h>  // Für waitpid() falls benötigt, aber hier über SignalHandler
-#include <errno.h>  // Für errno und perror
+/* Projektspezifische Header */
+#include "shell.hh"    // Shell-Klasse für Kommandoverarbeitung
+#include "sighnd.hh"   // SignalHandler-Klasse für SIGCHLD-Behandlung
+
+/* POSIX-Systemaufrufe */
+#include <unistd.h>    // Für fork(), execv()
+#include <sys/types.h> // Für pid_t (Prozess-ID Typ)
+#include <sys/wait.h>  // Für waitpid() (hier durch SignalHandler abstrahiert)
+#include <errno.h>     // Für errno und perror() Fehlerbehandlung
 
 using namespace std;
 using namespace ti2;
