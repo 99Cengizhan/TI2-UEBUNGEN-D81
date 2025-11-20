@@ -10,6 +10,50 @@ bibliography: bibueb01.yaml
 
 # Aufgabe 1
 
+![Das ist die Flagge von "Scheduling"](flagSch.png){width=100%}
+
+
+
+
+a) 
+
+Um bei a) die Lösung zu ermitteln muss man sich immer genau anschauen welcher Prozess die kürzeste Laufzeit hat, die Priorität lässt sich nur davon ableiten³:
+Zunächst startet bei 0 der Prozess P0 (Laufzeit 350), daher wird P0 als erstees eingetragen.
+Dann, bei 20ms, startet der Prozess P1 mit seiner Laufzeit von 50ms (RestlaufZeit P0 bei 330ms). 
+Da P1 nur 30ms Restlaufzeit hat, bei dem Zeitpunkt 40ms (Startpunkt von P2), läuft P1 weiter. 
+Bei 70ms ist der Prozess P1 abgeschlossen und P0 ist der nächste laufende Prozess, da er mit 330ms Restlaufzeit die 500ms von P2 unterbietet.
+Bei 110ms kommt der Prozess P3 mit einer Laufzeit von 450ms hinzu, allerdings ist der Prozess P0 bei einer Restlaufzeit von 290ms und läuft daher weiter.
+Bei 130ms kommt P4 hinzu (300ms), doch P0 ist der Shortest-Remaining-Job mit einer Laufzeit von 270ms. 
+Wenn bei 400ms der Prozess P0 beendet wurde, dann wird erst P4 und danach endlich P3 abgearbeitet, da P4 kürzer ist mit 300ms und schließlich die 450ms von P3 abgearbeitet werden. So entsteht die Lösung aus dem Screenshot.
+
+
+
+
+b)
+
+Hier muss man am besten eine Tabelle aufstellen, um so die Werte vergleichen zu können. Je niedriger der Wert der Prio, desto besser. Der Job mit dem niedrigsten Wert wird also ausgeführt, nachdem ein Job für 50ms ausgeführt wurde, erhöht sich der Wert der Priorität zwangsweise.
+Der erste Wert in der Tabelle wird alle 50ms halbiert und setzt dann addiert mit der Basispriorität den zweiten Wert zusammen (Priorität). Das Ergebnis schaut also so aus:
+
+|      | 0       | 50      | 100     | 150     | 200     | 250     | 300     | 350      |
+|------|---------|---------|---------|---------|---------|---------|---------|----------|
+| **P0** | 0 / 10  | 50 / 60 | 25 / 35 | 12 / 22 | 56 / 66 | 28 / 38 | 64 / 74 | 32 / 42  |
+| **P1** | –       | 0 / 0   | –       | –       | –       | –       | –       | –        |
+| **P2** | –       | 0 / 20  | 0 / 20  | 50 / 70 | 25 / 45 | 62 / 82 | 31 / 51 | 15 / 35  |
+| **P3** | –       | –       | –       | 0 / 60  | 0 / 60  | 0 / 60  | 0 / 60  | 0 / 60   |
+| **P4** | –       | –       | –       | 0 / 50  | 0 / 50  | 0 / 50  | 0 / 50  | 50 / 100 |
+
+
+Bei 0 wird also P0 ausgewählt, dieser Prozess hat bei 50ms noch 300ms Restlaufzeit.
+Bei 50ms wird P1 ausgewählt, dieser Prozess hat bei 100ms abgeschlossen.
+Bei 100ms wird P2 ausgewählt, dieser Prozess hat bei 150ms noch 450ms Restlaufzeit.
+Bei 150ms wird P0 ausgewählt, dieser Prozesss hat bei 200ms noch 250ms Restlaufzeit.
+Bei 200ms wird P2 ausgewählt, dieser Prozess hat bei 250ms noch 400ms Restlaufzeit.
+Bei 250ms wird P0 ausgewählt, dieser Prozess hat bei 300ms noch 200ms Restlaufzeit.
+Bei 300ms wird P4 ausgewählt, dieser Prozess hat bei 350ms noch 250ms Restlaufzeit.
+Bei 350ms wird P2 ausgewählt, dieser Prozess hat bei 400ms noch 350ms Restlaufzeit.
+
+Alle Prozesse werden sinnvoll abgearbeitet. Der kürzeste Prozess P1 endet zb. nur 30ms später als beim SRTF, falls dieser Prozess allerdings keinerlei solcher Verzögerungen wünscht, dann ist der Prozess nicht sinnvoll abgearbeitet worden, da er sich um 30ms verzögert hat. Auch der Prozess P0 braucht eher doppelt so lang um abgearbeitet zu werden, allerdings wird P2 viel früher beendet als bei SRTF, was anhand dessen, dass die Priorität für P2 bei 20 liegt, ein enormer Vorteil gegenüber SRTF ist. Dort wird P2 als letztes abgearbeiet.
+
 # Aufgabe 2
 
 ## 2a. Einleitung
@@ -230,5 +274,6 @@ cat: a.txt: No such file or directory
 
 1. https://man7.org/linux/man-pages/
 2. https://cplusplusreference.com
+3. https://www.studytonight.com/operating-system/shortest-remaining-time-first-scheduling-algorithm?utm_source=chatgpt.com (18.11.2025)
 
 # Anhang
