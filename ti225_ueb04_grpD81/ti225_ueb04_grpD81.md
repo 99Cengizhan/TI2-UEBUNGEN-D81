@@ -10,14 +10,12 @@ bibliography: bibueb01.yaml
 
 # Aufgabe 1
 
-![Das ist die Flagge von "Scheduling"](flagSch.png){width=100%}
+![Das ist die Flagge von "Scheduling"](flagSch.png)
 
 
+### 1a.
 
-
-a) 
-
-Um bei a) die Lösung zu ermitteln muss man sich immer genau anschauen welcher Prozess die kürzeste Laufzeit hat, die Priorität lässt sich nur davon ableiten³:
+Um bei **a** die Lösung zu ermitteln muss man sich immer genau anschauen welcher Prozess die kürzeste Laufzeit hat, die Priorität lässt sich nur davon ableiten³:
 Zunächst startet bei 0 der Prozess P0 (Laufzeit 350), daher wird P0 als erstees eingetragen.
 Dann, bei 20ms, startet der Prozess P1 mit seiner Laufzeit von 50ms (RestlaufZeit P0 bei 330ms). 
 Da P1 nur 30ms Restlaufzeit hat, bei dem Zeitpunkt 40ms (Startpunkt von P2), läuft P1 weiter. 
@@ -29,7 +27,7 @@ Wenn bei 400ms der Prozess P0 beendet wurde, dann wird erst P4 und danach endlic
 
 
 
-b)
+### 1b.
 
 Hier muss man am besten eine Tabelle aufstellen, um so die Werte vergleichen zu können. Je niedriger der Wert der Prio, desto besser. Der Job mit dem niedrigsten Wert wird also ausgeführt, nachdem ein Job für 50ms ausgeführt wurde, erhöht sich der Wert der Priorität zwangsweise.
 Der erste Wert in der Tabelle wird alle 50ms halbiert und setzt dann addiert mit der Basispriorität den zweiten Wert zusammen (Priorität). Das Ergebnis schaut also so aus:
@@ -275,5 +273,3 @@ cat: a.txt: No such file or directory
 1. https://man7.org/linux/man-pages/
 2. https://cplusplusreference.com
 3. https://www.studytonight.com/operating-system/shortest-remaining-time-first-scheduling-algorithm?utm_source=chatgpt.com (18.11.2025)
-
-# Anhang
