@@ -10,7 +10,7 @@ bibliography: bibueb01.yaml
 
 # Aufgabe 1
 
-## First-Fit
+### First-Fit
 
 Beim First-Fit-Verfahren durchläuft die Speicherverwaltung die Liste der Reihe nach und alloziert den erstbesten freien Bereich, der groß genug ist.
 
@@ -38,7 +38,7 @@ Beim First-Fit-Verfahren durchläuft die Speicherverwaltung die Liste der Reihe 
 Leider konnte die Flag nicht gefunden werden, dennoch sollte die Lösung so aussehen und N konnte als einzige Operation kein Speicher zugewiesen werden:
 ![FirstFit](1Loesung.png)
 
-## Next-Fit
+### Next-Fit
 
 Als nächstes kommt Next-Fit dran, das Ergebnis ist bei diesem Beispiel identisch, aber "Das Next-Fit-Verfahren funktioniert wie First-Fit, nur merkt sich das Next-Fit-Verfahren die aktuelle Position und fährt bei der nächsten Suche nach freiem Speicher von dieser Position aus fort."¹
 
@@ -64,7 +64,7 @@ Als nächstes kommt Next-Fit dran, das Ergebnis ist bei diesem Beispiel identisc
 Unsere Lösung sieht so aus, konnte leider aber auch keine Flag holen:
 ![NextFit](2Loesung.png)
 
-## Zuletzt: Best-Fit
+### Best-Fit
 Beim Best-Fit-Verfahren wird die gesamte Speicherliste durchsucht, bis ein kleinstmögliches Loch gefunden wird. Mit diesem Verfahren wird eine optimale Speicherausnutzung garantiert.
 
 - Der erste Eintrag A findet in VIII statt, hier wird der PLatz direkt optimal genutzt:
