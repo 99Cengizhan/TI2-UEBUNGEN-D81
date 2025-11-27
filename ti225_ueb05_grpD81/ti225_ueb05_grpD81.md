@@ -12,7 +12,7 @@ bibliography: bibueb01.yaml
 
 ![Das ist die Flagge von "gdb"](gdbFlag.png)
 
-### Überblick
+## Überblick
 
 Auf dem bereitgestellten System befand sich eine ausführbare Datei
 `programm`, die eine Passwortabfrage implementiert. Die Aufgabe bestand
