@@ -216,3 +216,4 @@ gewünschter Weise beeinflusst.
 ## Literaturverzeichnis
 
 1. https://sourceware.org/gdb/current/onlinedocs/gdb.html/
+2. https://openbook.rheinwerk-verlag.de/c_von_a_bis_z/014_c_dyn_speicherverwaltung_006.htm
