@@ -8,7 +8,7 @@ tutor: Tjark Moritz
 bibliography: bibueb01.yaml
 ---
 
-# Aufgabe 1 & CTF-Challenge „gdb“ – Lösungsdokumentation
+# Aufgabe 2 & CTF-Challenge „gdb“ – Lösungsdokumentation
 
 ![Das ist die Flagge von "gdb"](gdbFlag.png)
 
