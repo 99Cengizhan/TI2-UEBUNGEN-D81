@@ -8,6 +8,94 @@ tutor: Tjark Moritz
 bibliography: bibueb01.yaml
 ---
 
+# Aufgabe 1
+
+## First-Fit
+
+Beim First-Fit-Verfahren durchläuft die Speicherverwaltung die Liste der Reihe nach und alloziert den erstbesten freien Bereich, der groß genug ist.
+
+- Der erste freie Platz liegt in I
+[FirstFit](1A.png)
+
+- I hat noch genau genug Platz für B:
+[FirstFit](1B.png)
+
+- Daher muss C in II:
+[FirstFit](1C.png)
+
+- D passt nicht in I (weil I voll ist),sondern erst wieder in IV
+[FirstFit](1D.png)
+
+- B wird gelöscht:
+[FirstFit](1E.png)
+
+- Also gibt es PLatz für F:
+[FirstFit](1F.png)
+
+- G findet erst in V wieder Platz (die zu durchsuchende Liste startet ja immer mit I) :
+[FirstFit](1G.png)
+
+Leider konnte die Flag nicht gefunden werden, dennoch sollte die Lösung so aussehen und N konnte als einzige Operation kein Speicher zugewiesen werden:
+[FirstFit](1Loesung.png)
+
+## Next-Fit
+
+Als nächstes kommt Next-Fit dran, das Ergebnis ist bei diesem Beispiel identisch, aber "Das Next-Fit-Verfahren funktioniert wie First-Fit, nur merkt sich das Next-Fit-Verfahren die aktuelle Position und fährt bei der nächsten Suche nach freiem Speicher von dieser Position aus fort."¹
+
+- Wir fangen erst bei I an, da es keine vorherige Position gibt die wir uns gemerkt haben könnten:
+[NextFit](2A.png)
+
+- Wir schauen also von I und finden direkt passenden Platz:
+[NextFit](2B.png)
+
+- C muss in II:
+[NextFit](2C.png)
+
+- Wir schauen von II an und finden erst in IV Platz(hier hat D 1 Platz zu viel, dies wird später korrigiert) :
+[NextFit](2D.png)
+
+- Jetzt wird B gelöscht und wir schauen für die nächste Operaton wieder ab 
+[NextFit](2E.png)
+
+- Leider sind hier Aufzeichnungen verloren gegangen -> F wird in I eingefügt, da wir uns zuletzt in I bewegt haben (free). Dann wird G hinzugefügt, findet aber erst in V Platz:
+[NextFit](2F.png)
+
+- Die letzte Operation (der acht Operationen) ist H, hier wird lediglich D aus dem Speicher gelöscht.
+Unsere Lösung sieht so aus, konnte leider aber auch keine Flag holen:
+[NextFit](2Loesung.png)
+
+## Zuletzt: Best-Fit
+Beim Best-Fit-Verfahren wird die gesamte Speicherliste durchsucht, bis ein kleinstmögliches Loch gefunden wird. Mit diesem Verfahren wird eine optimale Speicherausnutzung garantiert.
+
+- Der erste Eintrag A findet in VIII statt, hier wird der PLatz direkt optimal genutzt:
+[BestFit](3A.png)
+
+- B hätte in I oder V landen können, I ist aber an erster Stelle:
+[BestFit](3B.png)
+
+- C landet in I, der Platz wurde optimal genutzt:
+[BestFit](3C.png)
+
+- D kommt jetzt in V:
+[BestFit](3D.png)
+
+- B wird gelöscht:
+[BestFit](3E.png)
+
+- F kommt in II, hätte aber auch optimal in VI gepasst, II ist aber an früherer Stelle:
+[BestFit](3F.png)
+
+- G füllt optimal den Platz aus, den B vorher belegt hatte:
+[BestFit](3G.png)
+
+- D wird gelöscht:
+[BestFit](3H.png)
+
+- Diese Lösung funktioniert besser als First-Fit oder Next-Fit, zumindest bei unserem Beispiel, da N diesmal nicht verloren gegangen ist, was bei den anderen Methoden allerdings der Fall war:
+[BestFit](3Loesung.png)
+
+Leider konnten wir auch hier keine Flagge holen.
+
 # Aufgabe 2 & CTF-Challenge „gdb“ – Lösungsdokumentation
 
 ![Das ist die Flagge von "gdb"](gdbFlag.png)
