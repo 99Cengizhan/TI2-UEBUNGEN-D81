@@ -29,7 +29,7 @@ Beim First-Fit-Verfahren durchläuft die Speicherverwaltung die Liste der Reihe 
 - B wird gelöscht:
 ![FirstFit](1E.png)
 
-- Also gibt es PLatz für F:
+- Also gibt es Platz für F:
 ![FirstFit](1F.png)
 
 - G findet erst in V wieder Platz (die zu durchsuchende Liste startet ja immer mit I) :
