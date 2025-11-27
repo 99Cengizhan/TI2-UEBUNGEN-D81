@@ -23,8 +23,6 @@ Ziel war es, den Programmablauf an einer geeigneten Stelle so zu
 manipulieren, dass die Passwortprüfung immer als erfolgreich erkannt
 wird.
 
-------------------------------------------------------------------------
-
 ## 1. Analyse des Programms
 
 Nach dem Starten von gdb wurde die `main`-Funktion disassembliert:
@@ -47,7 +45,7 @@ Wichtig:
 
 -   Die Funktion `checkPassword()` gibt ihr Ergebnis im Register **AL**
     zurück
-    -   `1` → Passwort korrekt\
+    -   `1` → Passwort korrekt
     -   `0` → Passwort falsch
 -   Direkt danach erfolgt die Überprüfung über `test al, al`
 -   Bei falschem Passwort wird per `je` in den Fehlerzweig gesprungen.
@@ -58,14 +56,13 @@ Das Register **AL so manipulieren**, dass es immer den Wert `1`
 enthält.\
 Dadurch wird das Passwort als korrekt akzeptiert.
 
-------------------------------------------------------------------------
-
 ## 2. Setzen eines Breakpoints an der Entscheidungsstelle
 
 Der passende Punkt ist die Instruktion:
 
-    0x4055dc
-
+``` gdb
+0x4055dc
+```
 Hier wird der Rückgabewert geprüft, bevor der Sprung ausgeführt wird.
 
 ``` gdb
@@ -81,8 +78,6 @@ Hier wird der Rückgabewert geprüft, bevor der Sprung ausgeführt wird.
 -   Die gesamte Passwortlogik bleibt unangetastet -- nur die
     Entscheidung wird beeinflusst
 
-------------------------------------------------------------------------
-
 ## 3. Automatische Manipulation durch Breakpoint-Commands
 
 Nach Setzen des Breakpoints wurden gdb-interne Befehle definiert, die
@@ -93,28 +88,18 @@ beim Erreichen des Breakpoints automatisch ausgeführt werden:
 > silent
 > set $al = 1
 > continue
->end
+> end
 ```
 
 ### Erklärung der Commands
 
-  -----------------------------------------------------------------------
-  Befehl                                     Bedeutung
-  ------------------------------------------ ----------------------------
-  `silent`                                   Unterdrückt Ausgaben beim
-                                             Breakpoint-Hit
-
-  `set $al = 1`                              Setzt Rückgabewert von
-                                             `checkPassword()` auf
-                                             „korrektes Passwort"
-
-  `continue`                                 Programm läuft ohne
-                                             Unterbrechung weiter
-  -----------------------------------------------------------------------
+| Befehl | Bedeutung |
+|------|---------|
+| `silent` | Unterdrückt Ausgaben beim Breakpoint-Hit |
+| `set $al = 1` | Setzt Rückgabewert von checkPassword() auf „korrektes Passwort" |
+| `continue` | Programm läuft ohne Unterbrechung weiter |
 
 Damit wird jeder Passwortversuch automatisch als korrekt erkannt.
-
-------------------------------------------------------------------------
 
 ## 4. Ausführen des Programms
 
@@ -131,8 +116,6 @@ und das Programm zeigt die Flag an:
 
 Das Passwort selbst wird somit vollständig umgangen.
 
-------------------------------------------------------------------------
-
 ## 5. Ergebnis
 
 Durch das geschickte Setzen eines Breakpoints und Manipulation des
@@ -140,7 +123,6 @@ Registers `al` konnte die Passwortabfrage erfolgreich umgangen werden.\
 Dies ist eine saubere, reproduzierbare Methode, die exakt an der
 Entscheidungsstelle des Programms eingreift und den Kontrollfluss in
 gewünschter Weise beeinflusst.
-
 
 
 ## Literaturverzeichnis
