@@ -8,24 +8,13 @@ tutor: Tjark Moritz
 bibliography: bibueb01.yaml
 ---
 
-# Aufgabe 1 
-
+# Aufgabe 1
 
 # Aufgabe 2 
 
 ![Das ist die Flagge von "FIFO"](FIFO.png)
 
-
-
-
-
-
-
-
-
-
 ![Das ist die Flagge von "LFU"](LFU.png)
-
 
 # Dokumentation: LFU 
 **Zugriffsfolge:** 2, 6, 1, 5, 6, 1, 3, 5, 5, 3, 1, 3, 6, 4, 2, 6, 3, 6, 6, 4  
