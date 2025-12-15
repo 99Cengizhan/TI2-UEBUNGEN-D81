@@ -465,10 +465,10 @@ g setzt den Zähler 1 auf 0 und entfernt Dateitabellenindex 6 und FD6 bei B
 
 -² https://leancrew.com/all-this/man/man2/lseek.html?utm_source=chatgpt.com
 
-- Vorlesungsunterlagen "Technische Informatik II" - Kapitel Speicherverwaltung und Paging
+-³ Vorlesungsunterlagen "Technische Informatik II" – Kapitel Speicherverwaltung und Paging
 
-- GeeksforGeeks (2025). „FIFO Page Replacement Algorithm“.  
+-⁴ GeeksforGeeks (2025). „FIFO Page Replacement Algorithm“.  
    https://www.geeksforgeeks.org/fifo-page-replacement-algorithm/
 
-- GeeksforGeeks (2025). „Least Frequently Used (LFU) Page Replacement Algorithm“.  
+-⁵ GeeksforGeeks (2025). „Least Frequently Used (LFU) Page Replacement Algorithm“.  
    https://www.geeksforgeeks.org/least-frequently-used-lfu-cache-implementation/
