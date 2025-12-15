@@ -267,7 +267,7 @@ Ergibt sich die vollständige Flag:
 
 # Aufgabe 2 
 
-![Das ist die Flagge von "FIFO"](FIFO.png)
+![Das ist die Flagge von "FIFO"](FIFO.png) 
 
 # Dokumentation: FIFO-Seitenersetzungsalgorithmus  
 **Zugriffsfolge:** 2, 6, 1, 5, 6, 1, 3, 5, 5, 3, 1, 3, 6, 4, 2, 6, 3, 6, 6, 4  
@@ -352,8 +352,11 @@ LFU schneidet in dieser Folge am schlechtesten ab, weil seltene, aber früh gela
 
 
 
-Lösung sieht so aus, konnte leider aber auch keine Flag holen:
-![Das ist die Challenge "CH"](CH.png)
+
+
+
+![Das ist die Challenge "CH". Lösung sieht so aus, konnte leider aber auch keine Flag holen.](CH.png)
+
 
 
 
