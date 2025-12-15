@@ -262,9 +262,6 @@ Ergibt sich die vollständige Flag:
 
 **`flag{730e0391-92fa-4f7e-a7f9-9246f6da0911}`**
 
-## Quellen
-
-1. Vorlesungsunterlagen "Technische Informatik II" - Kapitel Speicherverwaltung und Paging
 ---
 
 
@@ -467,6 +464,8 @@ g setzt den Zähler 1 auf 0 und entfernt Dateitabellenindex 6 und FD6 bei B
 -¹ https://www.geeksforgeeks.org/operating-systems/c-look-disk-scheduling-algorithm/
 
 -² https://leancrew.com/all-this/man/man2/lseek.html?utm_source=chatgpt.com
+
+- Vorlesungsunterlagen "Technische Informatik II" - Kapitel Speicherverwaltung und Paging
 
 - GeeksforGeeks (2025). „FIFO Page Replacement Algorithm“.  
    https://www.geeksforgeeks.org/fifo-page-replacement-algorithm/
