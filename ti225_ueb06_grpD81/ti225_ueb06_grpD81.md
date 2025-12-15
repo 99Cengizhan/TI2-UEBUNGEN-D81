@@ -1,5 +1,5 @@
 ---
-title: Abgabe Übungsblatt 05
+title: Abgabe Übungsblatt 06
 subtitle: Technische Informatik 2 Wintersemester 2025/26
 author: Baris Basar, Cengizhan Evcil, Nicolai Held
 group: D81
@@ -442,7 +442,7 @@ $$
 
 ![Befehle](orders.png){width=100%}
 
-a verschiebt die Position um 110, Dateitabelleneintrag 5 also 316²
+a verschiebt die Position² um 110, Dateitabelleneintrag 5 also 316
 
 b liest um 670, Dateitabelleneintrag 5 also 986
 
