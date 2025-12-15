@@ -1,5 +1,5 @@
 ---
-title: Abgabe Übungsblatt 05
+title: Abgabe Übungsblatt 06
 subtitle: Technische Informatik 2 Wintersemester 2025/26
 author: Baris Basar, Cengizhan Evcil, Nicolai Held
 group: D81
