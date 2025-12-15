@@ -1,5 +1,5 @@
 ---
-title: Abgabe Übungsblatt 06
+title: Abgabe Übungsblatt 05
 subtitle: Technische Informatik 2 Wintersemester 2025/26
 author: Baris Basar, Cengizhan Evcil, Nicolai Held
 group: D81
@@ -270,7 +270,7 @@ Ergibt sich die vollständige Flag:
 
 # Aufgabe 2 
 
-![Das ist die Flagge von "FIFO"](FIFO.png){width=100%}
+![Das ist die Flagge von "FIFO"](FIFO.png)
 
 # Dokumentation: FIFO-Seitenersetzungsalgorithmus  
 **Zugriffsfolge:** 2, 6, 1, 5, 6, 1, 3, 5, 5, 3, 1, 3, 6, 4, 2, 6, 3, 6, 6, 4  
@@ -320,7 +320,7 @@ FIFO hat in dieser Folge genau 8 Page Faults (Misses in den Schritten 1,2,3,4,7,
 
 
 
-![Das ist die Flagge von "LFU"](LFU.png){width=100%}
+![Das ist die Flagge von "LFU"](LFU.png)
 
 
 # Dokumentation: LFU 
@@ -355,9 +355,14 @@ LFU schneidet in dieser Folge am schlechtesten ab, weil seltene, aber früh gela
 
 
 
+Lösung sieht so aus, konnte leider aber auch keine Flag holen:
+![Das ist die Challenge "CH"](CH.png)
+
+
+
 # Aufgabe 3
 
-![FLAG-Aufgabe3](bang.png){width=100%}
+![FLAG-Aufgabe3](bang.png)
 
 FCFS – First Come First Served
 
@@ -437,12 +442,12 @@ $$
 
 # Aufgabe 4
 
-![Aufgabe4](bash.png){width=100%}
+![Aufgabe4](bash.png)
 
 
-![Befehle](orders.png){width=100%}
+![Befehle](orders.png)
 
-a verschiebt die Position² um 110, Dateitabelleneintrag 5 also 316
+a verschiebt die Position um 110, Dateitabelleneintrag 5 also 316²
 
 b liest um 670, Dateitabelleneintrag 5 also 986
 
