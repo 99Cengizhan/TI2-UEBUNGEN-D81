@@ -1,0 +1,51 @@
+---
+references:
+- type: book
+  id: Herold2017
+  author:
+  - family: Herold
+    given: Helmut
+  - family: Lurz
+    given: Bruno
+  - family: Wohlrab
+    given: Jürgen
+  - family: Hopf
+    given: Matthias
+  issued: 2017
+  title: Grundlagen der Informatik
+  publisher: Pearson
+  edition: 3
+  isbn: 978-3-86894-316-0
+- type: Book
+  id: Tanenbaum2014
+  author:
+  - family: Tanenbaum
+    given: Andrew S.
+  - family: Austin
+    given: Todd
+  issued: 2014
+  edition: 6
+  publisher: Pearson
+  isbn: 978-3-86894-238-5 
+  title: Rechnerarchitektur -- Von der digitalen Logik zum Parallelrechner
+
+- type: paper-conference
+  id: Abadi1994
+  address: Oakland, CA
+  title: Prudent engineering practice for cryptographic protocols
+  doi: 10.1109/RISP.1994.296587
+  accessed: 2023-03-16
+  container-title: Proceedings of 1994 IEEE Computer Society Symposium on Research in Security and Privacy
+  publisher: IEEE
+  author: Abadi, M. and Needham, R.
+  issued: 1994
+  page: 122--136
+
+- type: interview
+  author: OpenAI ChatGPT (Version 3.5)
+  interviewer: Stefanie Gerdes
+  id: chatgpt230321
+  issued: 2023-03-21
+  title: Kommunikation mit ChatGPT zum Thema E-Autofahrt zum Mond
+  URL: https://chat.openai.com
+---
