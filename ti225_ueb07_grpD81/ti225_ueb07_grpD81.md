@@ -138,4 +138,14 @@ Minimale LWM (aufgerundet): ⌈2,834⌉ = 3 Byte
 | 4    | 670 Byte    | 5 B | **174.400 Bit/s**   |
 | 5    | Minimale LWM für volle Rate | **3 Byte** |
 
+# Aufgabe 2
+
+![Flag der Aufgabe 2](flag2be.png)
+
+Die Atomarität¹ der write()-Systemaufrufe verhindert zwar eine Vermischung der Schreiboperationen, legt jedoch keine feste Ausführungsreihenfolge fest, sodass ohne Synchronisation nicht-deterministisches Verhalten entsteht.
+In unserer Aufgabe sieht man das daran, dass beide Prozesse in teilweise überlappende Dateibereiche schreiben (Offset 250-300 sowie 300-450). Je nach Reihenfolge überschreibt entweder Prozess A oder B diesen Bereich zuletzt.
+
 ## Literaturverzeichnis
+
+¹https://www.datacamp.com/de/tutorial/atomicity 26.12.25
+"Atomarität bedeutet, dass eine Transaktion in einer Datenbank unteilbar ist. Entweder läuft er bis zum Ende, wobei jeder einzelne Schritt nach Plan verläuft, oder er läuft überhaupt nicht. Es gibt kein Dazwischen. Keine halbfertigen Updates, keine unvollständig gespeicherten Daten, kein seltsamer Schwebezustand, in dem einige Dinge gelungen sind und andere nicht."
